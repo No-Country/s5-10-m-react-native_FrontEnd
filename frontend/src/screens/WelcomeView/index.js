@@ -3,14 +3,14 @@ import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
 import Styles from "./style";
 
-const Login = () => {
+const WelcomeView = () => {
   const styles = Styles;
   return (
     <View style={styles.container}>
-      <Text>Pagina de Login</Text>
+      <Text>Pagina de WelcomeView</Text>
       <StatusBar style="auto" />
     </View>
   );
 };
 
-export default Login;
+export default WelcomeView;
