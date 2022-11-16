@@ -7,7 +7,7 @@ import colors from "../../../utils/colors";
 import fonts from "../../../utils/fonts";
 import { View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-const Body = (props) => {
+const Body = ({ navigation }) => {
   return (
     <View style={style.container}>
       <LinearGradient
@@ -35,7 +35,7 @@ const Body = (props) => {
           color={colors.primary300}
           width={"75%"}
           padding={12}
-          onPress={() => console.log("create")}
+          onPress={() => navigation.navigate("PaginationCvStack")}
         />
       </LinearGradient>
     </View>
