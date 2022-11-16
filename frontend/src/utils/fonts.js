@@ -1,6 +1,6 @@
 const fonts = {
   h1: { fontWeight: "Regular", fontSize: 28 },
-  h2: { fontWeight: "Bold", fontSize: 23 },
+  h2: { fontWeight: "Bold", fontSize: 22 },
   title: { fontWeight: "Regular", fontSize: 20 },
   titleSmall: { fontWeight: "Regular", fontSize: 18 },
   labelRegular: {

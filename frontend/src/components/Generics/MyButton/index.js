@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import PropTypes from "prop-types";
 
-const MyButton = ({ text, color, bgcolor, width, onPress }) => {
+const MyButton = ({ text, color, bgcolor, width, onPress, padding }) => {
   return (
     <TouchableOpacity
       style={{
@@ -11,7 +11,7 @@ const MyButton = ({ text, color, bgcolor, width, onPress }) => {
         borderColor: !bgcolor && color,
         width: width ? width : "100%",
         borderRadius: 5,
-        padding: 5,
+        padding: padding ? padding : 8,
         elevation: 5,
       }}
       onPress={onPress}
