@@ -14,7 +14,11 @@ const MainStack = () => {
     >
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="InitStack" component={InitStack} />
-      <Stack.Screen name="PaginationCvStack" component={PaginationCvStack} />
+      <Stack.Screen
+        name="PaginationCvStack"
+        component={PaginationCvStack}
+        options={{ title: "Mi Cv", headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
