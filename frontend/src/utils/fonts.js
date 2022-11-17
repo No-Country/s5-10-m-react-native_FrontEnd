@@ -1,21 +1,18 @@
 const fonts = {
-  h1: { fontFamily: "Source Sans Pro", fontWeight: 400, fontSize: 28 },
-  h2: { fontFamily: "Source Sans Pro", fontWeight: 600, fontSize: 23 },
-  title: { fontFamily: "Source Sans Pro", fontWeight: 400, fontSize: 20 },
-  titleSmall: { fontFamily: "Source Sans Pro", fontWeight: 400, fontSize: 18 },
+  h1: { fontWeight: "Regular", fontSize: 28 },
+  h2: { fontWeight: "Bold", fontSize: 22 },
+  title: { fontWeight: "Regular", fontSize: 20 },
+  titleSmall: { fontWeight: "Regular", fontSize: 18 },
   labelRegular: {
-    fontFamily: "Source Sans Pro",
-    fontWeight: 400,
+    fontWeight: "Regular",
     fontSize: 17,
   },
   labelSemiBold: {
-    fontFamily: "Source Sans Pro",
-    fontWeight: 600,
+    fontWeight: "Bold",
     fontSize: 16,
   },
   text: {
-    fontFamily: "Source Sans Pro",
-    fontWeight: 400,
+    fontWeight: "Regular",
     fontSize: 11,
   },
 };

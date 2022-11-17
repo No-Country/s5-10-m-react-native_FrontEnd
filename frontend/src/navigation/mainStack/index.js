@@ -10,11 +10,15 @@ const MainStack = () => {
   return (
     <Stack.Navigator
       initialRouteName="Home"
-      screenOptions={{ headerShown: false }}
+      screenOptions={{ headerShown: true }}
     >
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="InitStack" component={InitStack} />
-      <Stack.Screen name="PaginationCvStack" component={PaginationCvStack} />
+      <Stack.Screen
+        name="PaginationCvStack"
+        component={PaginationCvStack}
+        options={{ title: "Mi Cv", headerShown: false }}
+      />
     </Stack.Navigator>
   );
 };
