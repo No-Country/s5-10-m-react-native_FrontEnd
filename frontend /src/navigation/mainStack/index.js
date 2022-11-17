@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 const MainStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName="OnBoarding"
+      initialRouteName="Home"
       screenOptions={{ headerShown: true }}
     >
      <Stack.Screen name="Home" component={Home} />

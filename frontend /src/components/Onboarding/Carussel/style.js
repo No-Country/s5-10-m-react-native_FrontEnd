@@ -8,25 +8,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     marginLeft:10,
     marginRight:10,
 
   },
 
   barContainer: {
-    position: 'absolute',
-    zIndex: 2,
     bottom: 10,
     flexDirection: 'row',
+    marginBottom:69
 
   },
 
   textContainer: {
-    flexDirection: 'column',
-    padding: 4,
-    marginTop: 24,
-    marginBottom: 41
+    marginBottom: 21,
+    marginHorizontal:40,
 
   },
 
@@ -40,8 +36,8 @@ const styles = StyleSheet.create({
 
   bar: {
     backgroundColor:'#9B99FF' ,
-    height: 10,
-    position: 'absolute',
+    height: 12,
+    
     left: 0,
     top: 0,
   },
@@ -49,10 +45,21 @@ const styles = StyleSheet.create({
   carrusel: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: widthScreen * 0.97,
-    height: heightScreen * 0.45,
+    Width: 291,
+    Height: 291,
     marginTop: 5,
-  }
+    marginHorizontal:40
+  },
+  buttonContainer:{
+    marginBottom:25,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height:'18%'
+   
+  },
+
+  
 })
 
 export default styles;

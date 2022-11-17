@@ -7,17 +7,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
 
-  },
-  but1: {
-    alignItems: 'center',
-    marginTop: 69,
-
- 
-  },
-  but2: {
-    alignItems: 'center',
-    marginTop:16,
   }
+  
 
 })
 

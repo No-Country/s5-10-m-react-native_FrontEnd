@@ -32,7 +32,7 @@ function EmailConfimation() {
                     text="Abrir correo electrónico"
                     bgcolor={colors.primary300}
                     color={colors.neutro100}
-                    width={"75%"}
+                    width={"85%"}
                     padding={12}
                     onPress={() => console.log("create")}
                 /></View>
