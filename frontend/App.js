@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import MainStack from "./src/navigation/MainStack";
+import MainStack from "./src/navigation/mainStack";
 import { useFonts } from "expo-font";
 import { ActivityIndicator, StyleSheet, View } from "react-native";
 import colors from "./src/utils/colors";
