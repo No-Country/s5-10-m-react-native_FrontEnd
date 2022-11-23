@@ -17,7 +17,7 @@ const Register = () => {
     <View style={styles.container}>
       <View>
         <MyText 
-          value={'Crear cuenta con mail'} 
+          value={'Crear cuenta con el mail'} 
           size={24} 
           color={colors.neutro700}
           style={[fonts.h1, colors.neutro700]}
