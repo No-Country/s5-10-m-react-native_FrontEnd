@@ -3,13 +3,14 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../../screens/Home";
 import InitStack from "../InitStack";
 import PaginationCvStack from "../PaginationCvStack";
+import Profile from "../../screens/Profile/Profile";
 
 const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="UserProfile"
       screenOptions={{ headerShown: true }}
     >
       <Stack.Screen name="Home" component={Home} />
@@ -19,6 +20,7 @@ const MainStack = () => {
         component={PaginationCvStack}
         options={{ title: "Mi Cv", headerShown: false }}
       />
+          <Stack.Screen name="UserProfile" component={Profile}   options={{ title: "Perfil", headerBackTitleVisible: false, headerShown:true}}  />
     </Stack.Navigator>
   );
 };
