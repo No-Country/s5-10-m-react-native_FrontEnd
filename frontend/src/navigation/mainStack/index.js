@@ -11,7 +11,7 @@ const MainStack = () => {
   return (
     <Stack.Navigator
       initialRouteName="Home"
-      screenOptions={{ headerShown: true }}
+      screenOptions={{ headerShown: false}}
     >
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="InitStack" component={InitStack} />

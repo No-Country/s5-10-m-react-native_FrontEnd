@@ -17,6 +17,7 @@ const Styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     height: heightScreen * 0.09,
+    width: widthScreen * 0.95,
     borderBottomWidth: 1,
     marginVertical: 15,
     marginHorizontal: 15,
@@ -35,7 +36,7 @@ title3:{
   marginLeft: -260
 },
 title4:{
- marginRight:240
+ marginRight:300
 }
 });
 

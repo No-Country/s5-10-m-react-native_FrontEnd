@@ -12,9 +12,11 @@ const Home = (props) => {
 
   return (
     <View>
-      <Header fullName={"Juan Perez"} />
+      <TouchableOpacity  onPress={()=> props.navigation.navigate('UserProfile')}> 
+      <Header fullName={"Juan Perez"}  />
+      </TouchableOpacity>
       <Body navigation={props.navigation} />
-      <TouchableOpacity onPress={()=> props.navigation.navigate('UserProfile')}><Text>Perfil</Text></TouchableOpacity>
+      
       <Footer data={[]} />
     </View>
   );
