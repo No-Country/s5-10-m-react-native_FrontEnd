@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 const MainStack = () => {
   return (
     <Stack.Navigator
-      initialRouteName="UserProfile"
+      initialRouteName="Home"
       screenOptions={{ headerShown: true }}
     >
       <Stack.Screen name="Home" component={Home} />
@@ -20,7 +20,7 @@ const MainStack = () => {
         component={PaginationCvStack}
         options={{ title: "Mi Cv", headerShown: false }}
       />
-          <Stack.Screen name="UserProfile" component={Profile}   options={{ title: "Perfil", headerBackTitleVisible: false, headerShown:true}}  />
+          <Stack.Screen name="UserProfile" component={Profile}   options={{ title: "Perfil",  headerShown:true}}  />
     </Stack.Navigator>
   );
 };
