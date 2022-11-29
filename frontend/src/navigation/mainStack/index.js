@@ -18,7 +18,10 @@ const MainStack = () => {
       screenOptions={{ headerShown: true }}
     >
       <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="InitStack" component={InitStack} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Register" component={Register} />
       <Stack.Screen
         name="PaginationCvStack"
         component={PaginationCvStack}

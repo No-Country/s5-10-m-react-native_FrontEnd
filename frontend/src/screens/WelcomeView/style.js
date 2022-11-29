@@ -9,7 +9,7 @@ const Styles = StyleSheet.create({
     justifyContent: "center",
   },
   mx_10: {
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 10,
     width: '80%' 
   },

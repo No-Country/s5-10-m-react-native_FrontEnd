@@ -1,4 +1,5 @@
 import React from "react";
+import {  useNavigation } from '@react-navigation/native';
 import { StatusBar } from "expo-status-bar";
 import { Text, View, TextInput, Button } from "react-native";
 import Styles from "./style";
@@ -13,6 +14,9 @@ import fonts from '../../utils/fonts';
 
 const Login = () => {
   const styles = Styles;
+
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <View>
@@ -64,7 +68,7 @@ const Login = () => {
             </View>
             <View style={styles.btnView}>
               <MyButton 
-                onPress={handleSubmit} 
+                onPress={()=> navigation.navigate('Home')} 
                 text={"Ingresar"} 
                 bgcolor={colors.primary500} 
                 color={colors.neutro100}
