@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 
-const MyText = ({ value, color, size, weight, type, align, maxWidth }) => {
+const MyText = ({ value, color, size, weight, type, align, maxWidth, styled }) => {
   return (
     <>
       <Text
@@ -13,6 +13,7 @@ const MyText = ({ value, color, size, weight, type, align, maxWidth }) => {
           textDecorationLine: type ? type : "none",
           textAlign: align,
           maxWidth: maxWidth,
+          ...styled
         }}
       >
         {value}

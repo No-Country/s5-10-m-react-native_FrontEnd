@@ -17,5 +17,7 @@ const colors = {
   ready: "#d1fad1",
   unfinished: "#eae3fc",
   empty: "#fce4cf",
+  btnBG: "#6d4cff",
+  lightGray: '#e8dfff',
 };
 export default colors;

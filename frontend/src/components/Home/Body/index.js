@@ -31,6 +31,7 @@ const Body = ({ navigation }) => {
           />
         </View>
         <Button
+          icons={false}
           text="Crear CV"
           color={colors.primary300}
           width={"75%"}

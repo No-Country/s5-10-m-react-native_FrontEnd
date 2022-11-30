@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Text from "../../Generics/MyText";
-import { FlatList, TextInput, TouchableOpacity, View } from "react-native";
+import { FlatList, TextInput, TouchableOpacity, View, ScrollView } from "react-native";
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 import style from "./style";
 import { roles } from "./roles";
@@ -84,6 +84,7 @@ const RolPage = (props) => {
         />
       </View>
     </View>
+    
   );
 };
 
