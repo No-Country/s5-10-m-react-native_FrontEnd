@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { Text, View, FlatList, TouchableOpacity, TextInput, ScrollView } from "react-native";
 import Styles from "./styles";
-import {formacion} from './formacion';
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 import { Entypo } from '@expo/vector-icons';
 import MyText from "../../../Generics/MyText";
@@ -15,7 +14,7 @@ import fonts from "../../../../utils/fonts";
 import { Formik } from 'formik';
 
 
-const Register = () => {
+const CareerForm = () => {
     const [selectFormacion, setSelectFormacion] = useState();
     const [desde, setDesde] = useState('DD/MM/YY');
     const [hasta, setHasta] = useState("DD/MM/YY");
@@ -27,7 +26,7 @@ const Register = () => {
   return (
     <ScrollView>
     <View style={Styles.container}>
-      <Text>Tipo de Formación</Text>
+      <Text>Organizacion o Empresa</Text>
       <View>
       <Formik
         initialValues={{ fomacion: '',}}
@@ -35,63 +34,29 @@ const Register = () => {
       >
         {({ handleChange, handleBlur, handleSubmit, values }) => (
             
-            <>
-      <FlatList
-            numColumns={2}
-            data={formacion}
-            renderItem={( {item} ) => {
-            console.log(item)
-            return (
-              <TouchableOpacity
-                activeOpacity={0.7}
-                style={[
-                  item.formacion == selectFormacion ? Styles.formacionViewSelected : Styles.formacionView,
-                  Styles.btn
-                ]}
-                onPress={() => setSelectFormacion(item.formacion)}
-              >
-                {item.formacion == selectFormacion && (
-                  <Icon
-                    name="checkbox-marked-circle"
-                    size={20}
-                    color={colors.neutro100}
-                    style={styles.icon}
-                  />
-                )}
-                <View>
-                  <MyText
-                    onChangeText={handleChange('formacion')}
-                    onBlur={handleBlur('formacion')}
-                    value={item.formacion}
-                    color={
-                      item.formacion == selectFormacion
-                        ? colors.neutro100
-                        : colors.neutro600
-                    }
-                    size={fonts.labelRegular.fontSize}
-                    weight={"Regular"}
-                    styled={{
-                        maxWidth: '100%',
-                        paddingHorizontal: 10
-                    }}
-                  />
-                </View>
-              </TouchableOpacity>
-            );
-          }}
-        />
-        <Text>Lugar/Institucion/Empresa</Text>
+        <>
          <View>
               <Text style={styles.formLabel}>Nombre</Text>
               <TextInput
                 onChangeText={handleChange('institucion')}
                 onBlur={handleBlur('institucion')}
                 value={values.institucion}
-                placeholder={'Ej. Platzi'}
+                placeholder={'Ej. Globant'}
                 style={styles.formInput}
               />
         </View>
-        <Text>Periodo Formacion</Text>
+        <Text>Puesto o rol</Text>
+        <View>
+              <Text style={styles.formLabel}>Nombre</Text>
+              <TextInput
+                onChangeText={handleChange('rol')}
+                onBlur={handleBlur('rol')}
+                value={values.rol}
+                placeholder={'Ej. Front end developer'}
+                style={styles.formInput}
+              />
+        </View>
+        <Text>Periodo de Trabajo</Text>
         <View style={{display: 'flex', flexDirection: 'row'}}>
             <View style={{width: '50%'}}>
                 <Text style={styles.formLabelDate}>Desde</Text>
@@ -146,18 +111,8 @@ const Register = () => {
                 />
             </View>
         </View>
-        <Text>Titulo de la Formacion</Text>
-        <View>
-              <Text style={styles.formLabel}>Nombre</Text>
-              <TextInput
-                onChangeText={handleChange('titulo')}
-                onBlur={handleBlur('titulo')}
-                value={values.titulo}
-                placeholder={'Ej. Fullstack developer'}
-                style={styles.formInput}
-              />
-        </View>
-            <Text>Describe lo que aprendiste en tu formacion</Text>
+       
+            <Text>Describe las tareas realizadas</Text>
             <View>
               <Text style={styles.formLabel}>Nombre</Text>
               <TextInput
@@ -192,4 +147,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default CareerForm;

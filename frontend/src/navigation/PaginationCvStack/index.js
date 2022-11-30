@@ -8,7 +8,8 @@ import CareerPage from "../../components/PaginationCV/CareerPage";
 import EducationPage from "../../components/PaginationCV/EducationPage";
 import PersonalPage from "../../components/PaginationCV/PersonalPage";
 import SkillsPage from "../../components/PaginationCV/SkillsPage";
-import EducationOne from '../../components/PaginationCV/EducationPage/educationSections/EducationView1'
+import EducationOne from '../../components/PaginationCV/EducationPage/educationSections/EducationView1';
+import CareerForm from '../../components/PaginationCV/CareerPage/CareerForm/careerForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -53,6 +54,11 @@ const PaginationCvStack = () => {
         name="EducacionFormulario"
         component={EducationOne}
         options={{title: 'Educacion Formulario'}}
+      />
+      <Stack.Screen
+        name="CareerForm"
+        component={CareerForm}
+        options={{title: 'Experiencia y Proyectos'}}
       />
       {/* fin de secciones de educacion */}
       <Stack.Screen
