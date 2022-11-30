@@ -14,7 +14,7 @@ const Styles = StyleSheet.create({
   },
 
   header: {
-    height: heightScreen * 0.25,
+    height: heightScreen * 0.2,
     width: widthScreen * 1,
     display: "flex",
     justifyContent: "space-around",
@@ -50,12 +50,18 @@ const Styles = StyleSheet.create({
   input: {
     textAlign: "center",
     width: "70%",
-    padding:'1%',
-    fontSize:fonts.labelRegular.fontSize,
+    padding: "1%",
+    fontSize: fonts.labelRegular.fontSize,
     borderRadius: 10,
     backgroundColor: "#ffff",
     elevation: 2,
     color: colors.primary500,
+  },
+  buttonContainer: {
+    width: widthScreen * 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: "10%",
   },
 });
 
