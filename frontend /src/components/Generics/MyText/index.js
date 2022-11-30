@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 
-const MyText = ({ value, color, size, weight, type, align }) => {
+const MyText = ({ value, color, size, weight, type, align, maxWidth, children }) => {
   return (
-    <>
+    
       <Text
         style={{
           color: color,
@@ -14,9 +14,9 @@ const MyText = ({ value, color, size, weight, type, align }) => {
           textAlign: align,
         }}
       >
-        {value}
+        {children}
       </Text>
-    </>
+    
   );
 };
 
