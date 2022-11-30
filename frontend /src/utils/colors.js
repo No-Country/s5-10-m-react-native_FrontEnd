@@ -17,5 +17,6 @@ const colors = {
   ready: "#d1fad1",
   unfinished: "#eae3fc",
   empty: "#fce4cf",
+ 
 };
 export default colors;

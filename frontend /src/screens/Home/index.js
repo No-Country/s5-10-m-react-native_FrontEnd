@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text } from "react-native";
+import { View, Text, Button, TouchableOpacity } from "react-native";
 import Styles from "./style";
 import Header from "../../components/Home/Header";
 import Body from "../../components/Home/Body";
@@ -14,8 +14,11 @@ const Home = () => {
 
   return (
     <View>
-      <Header fullName={"Juan Perez"} />
-      <Body />
+      <TouchableOpacity  onPress={()=> props.navigation.navigate('UserProfile')}> 
+      <Header fullName={"Juan Perez"}  />
+      </TouchableOpacity>
+      <Body navigation={props.navigation} />
+      
       <Footer data={[]} />
     </View>
   );
