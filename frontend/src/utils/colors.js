@@ -15,6 +15,7 @@ const colors = {
   google: "#c5221f",
   linkedin: "#2979ca",
   ready: "#d1fad1",
+  
   unfinished: "#eae3fc",
   empty: "#fce4cf",
 };
