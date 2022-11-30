@@ -37,7 +37,7 @@ const Body = (props) => {
           color={colors.primary300}
           width={"75%"}
           padding={12}
-          onPress={() => console.log("create")}
+          onPress={() => props.navigation.navigate("PaginationCvStack")}
         />
       </LinearGradient>
     </View>

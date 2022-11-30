@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Text, View } from "react-native";
 
-const MyText = ({ value, color, size, weight, type, align, maxWidth, children }) => {
+const MyText = ({ value, color, size, weight, type, align, maxWidth}) => {
   return (
     
       <Text
         style={{
+          maxWidth:maxWidth,
           color: color,
           fontFamily: weight,
           fontSize: size,
@@ -14,7 +15,7 @@ const MyText = ({ value, color, size, weight, type, align, maxWidth, children })
           textAlign: align,
         }}
       >
-        {children}
+      {value}
       </Text>
     
   );

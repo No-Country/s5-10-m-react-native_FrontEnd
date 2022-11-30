@@ -7,6 +7,7 @@ import styles from "./style";
 import { useDimensions } from "../../../hooks/useDimensions";
 import MyText from '../../Generics/MyText';
 import MyButton from '../../Generics/MyButton/index'
+import { useNavigation } from '@react-navigation/native';
 
 const { widthScreen } = useDimensions();
 
@@ -20,6 +21,7 @@ const images = [
 
 
 const Carrusel = () => {
+    const navigation = useNavigation();
     const FIXED_BAR_WIDTH = 100;
     const BAR_SPACE = 10;
 
@@ -125,7 +127,7 @@ const Carrusel = () => {
                     color={colors.neutro100}
                     width={"85%"}
                     padding={12}
-                    onPress={() => console.log("create")}
+                    onPress={() => navigation.navigate("WelcomeView")}
                 />
 
                 <MyButton
@@ -134,7 +136,7 @@ const Carrusel = () => {
                     color={colors.primary300}
                     width={"85%"}
                     padding={12}
-                    onPress={() => console.log("home")}
+                    onPress={() => navigation.navigate("Login")}
                 />
 
             </View>

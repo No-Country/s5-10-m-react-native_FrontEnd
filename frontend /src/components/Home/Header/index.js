@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Image, View } from "react-native";
-import Text from "../../Generics/MyText";
+import Text from "../../Generics/MyText/index";
 import style from "./style";
 import colors from "../../../utils/colors";
 import fonts from "../../../utils/fonts";
 import { LinearGradient } from "expo-linear-gradient";
+
+
 const Header = ({ fullName }) => {
   return (
     <LinearGradient 

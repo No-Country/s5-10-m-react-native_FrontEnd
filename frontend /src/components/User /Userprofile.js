@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Text, TouchableOpacity, View } from 'react-native';
+import {Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
 import Styles from './style';
 import colors from "../../utils/colors";

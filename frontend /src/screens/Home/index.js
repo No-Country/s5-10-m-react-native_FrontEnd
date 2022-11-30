@@ -9,7 +9,7 @@ import Footer from "../../components/Home/Footer";
 // import Text from "../../components/Generics/MyText";
 // import fonts from "../../utils/fonts";
 
-const Home = () => {
+const Home = (props) => {
   const styles = Styles;
 
   return (

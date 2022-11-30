@@ -12,7 +12,7 @@ import MyText from '../../components/Generics/MyText';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
 
-const Login = () => {
+const Login = (props) => {
   const styles = Styles;
 
   const navigation = useNavigation();
@@ -68,7 +68,7 @@ const Login = () => {
             </View>
             <View style={styles.btnView}>
               <MyButton 
-                onPress={()=> navigation.navigate('Home')} 
+                onPress={()=> props.navigation.navigate('Home')} 
                 text={"Ingresar"} 
                 bgcolor={colors.primary500} 
                 color={colors.neutro100}
