@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Text from "../../Generics/MyText/index";
+import Text from "../../Generics/MyText";
+import Button from "../../Generics/MyButton";
 import { FlatList, TextInput, TouchableOpacity, View } from "react-native";
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 import style from "./style";
 import { roles } from "./roles";
 import colors from "../../../utils/colors";
 import fonts from "../../../utils/fonts";
+import { useNavigation } from "@react-navigation/native";
 
 const RolPage = (props) => {
   const [selectRole, setSelectRole] = useState("Rol/Puesto");
   const [otherRol, setOtherRol] = useState("......");
-
+  const { navigate } = useNavigation();
   return (
     <View style={style.container}>
       <View style={style.header}>
@@ -43,44 +45,52 @@ const RolPage = (props) => {
         )}
       </View>
 
-      <View>
-        <FlatList
-          numColumns={3}
-          data={roles}
-          renderItem={({ item }) => {
-            return (
-              <TouchableOpacity
-                activeOpacity={0.7}
-                style={
-                  item.rol == selectRole ? style.rolViewSelected : style.rolView
-                }
-                onPress={() => setSelectRole(item.rol)}
-              >
-                {item.rol == selectRole && (
-                  <Icon
-                    name="checkbox-marked-circle"
-                    size={20}
-                    color={colors.primary500}
-                    style={style.icon}
-                  />
-                )}
-                <View>
-                  <Text
-                    value={item.rol}
-                    color={
-                      item.rol == selectRole
-                        ? colors.primary300
-                        : colors.neutro600
-                    }
-                    size={fonts.labelRegular.fontSize}
-                    weight={"Regular"}
-                    align={"center"}
-                    maxWidth={"80%"}
-                  />
-                </View>
-              </TouchableOpacity>
-            );
-          }}
+      <FlatList
+        numColumns={3}
+        data={roles}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity
+              activeOpacity={0.7}
+              style={
+                item.rol == selectRole ? style.rolViewSelected : style.rolView
+              }
+              onPress={() => setSelectRole(item.rol)}
+            >
+              {item.rol == selectRole && (
+                <Icon
+                  name="checkbox-marked-circle"
+                  size={20}
+                  color={colors.primary500}
+                  style={style.icon}
+                />
+              )}
+              <View>
+                <Text
+                  value={item.rol}
+                  color={
+                    item.rol == selectRole
+                      ? colors.primary300
+                      : colors.neutro600
+                  }
+                  size={fonts.labelRegular.fontSize}
+                  weight={"Regular"}
+                  align={"center"}
+                  maxWidth={"80%"}
+                />
+              </View>
+            </TouchableOpacity>
+          );
+        }}
+      />
+      <View style={style.buttonContainer}>
+        <Button
+          color={colors.neutro100}
+          bgcolor={colors.primary400}
+          onPress={() => navigate("PersonalPage")}
+          text={"Siguiente"}
+          width={"80%"}
+          padding={12}
         />
       </View>
     </View>

@@ -7,6 +7,13 @@ const Styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  btnContainer:{
+    marginBottom:0,
+    width:'100%',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    height:'18%'
+  }
 });
 
 export default Styles;

@@ -2,9 +2,10 @@ import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import PropTypes from "prop-types";
 
-const MyButton = ({ text, color, bgcolor, width, onPress, padding }) => {
+const MyButton = ({ text, color, bgcolor, width, onPress, padding,style,icon, height }) => {
   return (
     <TouchableOpacity
+    
       style={{
         backgroundColor: bgcolor ? bgcolor : "#fff",
         borderWidth: bgcolor ? 0 : 1,
@@ -13,10 +14,13 @@ const MyButton = ({ text, color, bgcolor, width, onPress, padding }) => {
         borderRadius: 5,
         padding: padding ? padding : 8,
         elevation: 5,
+        style:style,
+         height:height
       }}
       onPress={onPress}
+      icon={icon}
     >
-      <Text style={{ color: color, textAlign: "center" }}>{text}</Text>
+    <Text style={{ color: color, textAlign: "center" }}> {icon} {text}</Text>
     </TouchableOpacity>
   );
 };

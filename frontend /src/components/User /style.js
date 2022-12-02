@@ -33,11 +33,25 @@ const Styles = StyleSheet.create({
 
   },
 title3:{
-  marginLeft: -260
+ color:colors.error,
+ paddingLeft: 20
+
 },
-title4:{
- marginRight:300
-}
+section2: {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  height: heightScreen * 0.09,
+  width: widthScreen * 0.95,
+  borderWidth: 1,
+  paddingHorizontal:10,
+ marginTop:270,
+  marginHorizontal: 15,
+  borderColor: colors.error,
+  borderRadius:8
+},
+
 });
 
 export default Styles;

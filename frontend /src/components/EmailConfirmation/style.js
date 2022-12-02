@@ -1,13 +1,11 @@
 import { StyleSheet } from "react-native";
-import { useDimensions } from "../../hooks/useDimensions";
-
-const { heightScreen, widthScreen } = useDimensions();
 
 const Styles = StyleSheet.create({
   container: {
    display:'flex',
     alignItems: 'center',
     justifyContent: 'center', 
+
    
   },
   emailImage:{
@@ -15,7 +13,8 @@ const Styles = StyleSheet.create({
     justifyContent: 'center',
     width: 240,
     height: 240,
-    marginTop: 15,
+   marginLeft:70,
+    marginTop:80
   },
   textContainer:{
     flexDirection: 'column',

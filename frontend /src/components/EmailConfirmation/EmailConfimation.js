@@ -5,8 +5,12 @@ import style from "./style";
 import colors from "../../utils/colors";
 import fonts from "../../utils/fonts";
 import MyText from '../Generics/MyText';
+import { useNavigation } from '@react-navigation/native';
 
 function EmailConfimation() {
+
+    let navigation = useNavigation();
+
     return (
         <View style={style.emailContainer}>
             <ScrollView>
@@ -28,14 +32,15 @@ function EmailConfimation() {
                     />
                 </View>
                 <View style={style.but}>
-                <MyButton
-                    text="Abrir correo electrónico"
-                    bgcolor={colors.primary300}
-                    color={colors.neutro100}
-                    width={"85%"}
-                    padding={12}
-                    onPress={() => console.log("create")}
-                /></View>
+                    <MyButton
+                        text="Abrir correo electrónico"
+                        bgcolor={colors.primary300}
+                        color={colors.neutro100}
+                        width={"85%"}
+                        padding={12}
+                        onPress={() => navigation.navigate("Login")}
+                    />
+                </View>
             </ScrollView>
         </View>
     )

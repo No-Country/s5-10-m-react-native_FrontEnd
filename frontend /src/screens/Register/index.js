@@ -11,17 +11,18 @@ import MyText from '../../components/Generics/MyText';
 import colors from '../../utils/colors';
 import fonts from '../../utils/fonts';
 
-const Register = () => {
+const Register = (props) => {
   const styles = Styles;
   return (
     <View style={styles.container}>
-      <View>
-        <MyText 
-          value={'Crear cuenta con el mail'} 
-          size={24} 
+      <View style={styles.formText}>
+        <MyText
+          value={'Crear cuenta con el mail'}
+          size={24}
+          fontFamily={fonts.h1}
           color={colors.neutro700}
-          style={[fonts.h1, colors.neutro700]}
-        >Crear cuenta con mail</MyText>
+
+        />
       </View>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
@@ -40,7 +41,7 @@ const Register = () => {
               />
             </View>
             <View>
-            <Text style={styles.formLabel}>Correo electronico</Text>
+              <Text style={styles.formLabel}>Correo electronico</Text>
               <TextInput
                 onChangeText={handleChange('email')}
                 onBlur={handleBlur('email')}
@@ -50,29 +51,31 @@ const Register = () => {
               />
             </View>
             <View>
-              <Text style={styles.formLabelContrasena}>Contraseña</Text>
+              <Text style={styles.formLabel}>Contraseña</Text>
               <TextInput
                 onChangeText={handleChange('password')}
                 onBlur={handleBlur('password')}
                 value={values.password}
                 style={styles.formInput}
                 placeholder={'**********'}
+                secureTextEntry={true}
               />
             </View>
             <View style={styles.btnView}>
-              <MyButton 
-                onPress={handleSubmit} 
-                text={"Crear cuenta con mail"} 
-                bgcolor={colors.primary500} 
+              <MyButton
+                onPress={() => props.navigation.navigate('Email')}
+                text={"Crear cuenta con mail"}
+                bgcolor={colors.primary500}
                 color={colors.neutro100}
                 style={styles.btn}
+                height={'56%'}
               />
             </View>
           </View>
         )}
       </Formik>
-    <StatusBar style="auto" />
-  </View>
+      <StatusBar style="auto" />
+    </View>
   );
 };
 

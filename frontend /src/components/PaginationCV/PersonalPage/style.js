@@ -2,6 +2,8 @@ import { StyleSheet } from "react-native";
 import { useDimensions } from "../../../hooks/useDimensions";
 import colors from "../../../utils/colors";
 const { heightScreen, widthScreen } = useDimensions();
+
+
 const Styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -1,5 +1,5 @@
 import React from "react";
-import {  useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from "expo-status-bar";
 import { Text, View, Image, TouchableOpacity } from "react-native";
 import Styles from "./style";
@@ -24,20 +24,21 @@ const WelcomeView = () => {
         color={colors.neutro700}
         style={[fonts.h1, colors.neutro700]}
 
-      >
-        Bienvenid@ a MyCV
-      </MyText>
-      {/* Cambiar Imagen no pude exportarlo de Figma*/}
+      />
+
       <Image source={require('../../../assets/Welcome.png')} />
-      <View style={styles.mx_10}>
+
+      <View style={styles.btnContainer}>
         <MyButton
           text={'Crear cuenta con mail'}
           bgcolor={colors.primary500}
           color={colors.neutro100}
+          width={"85%"}
+          padding={12}
           onPress={() => navigation.navigate('Register')}
         />
       </View>
-      <View style={styles.mx_10}>
+      {/* <View style={styles.mx_10}>
         <MyButton
           text={'Ingresar con Google'}
           borderColor={colors.google}
@@ -50,15 +51,19 @@ const WelcomeView = () => {
           border={colors.linkedin}
           color={colors.linkedin}
         />
-      </View>
-      
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} >
-          <Text style={styles.text} >Tenes cuenta? Ingresar </Text>
-        </TouchableOpacity>
-        <StatusBar style="auto" />
+      </View> */}
 
-      </View>
-      );
+      <TouchableOpacity onPress={() => navigation.navigate('Login')} >
+        <MyText
+          value={'Tenes cuenta? Ingresar'}
+          color={colors.blue}
+          size={fonts.labelRegular.fontSize}
+          weight={fonts.labelRegular.fontWeight}
+        />
+      </TouchableOpacity>
+      <StatusBar style="auto" />
+    </View>
+  );
 };
 
-      export default WelcomeView;
+export default WelcomeView;

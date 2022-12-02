@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   bar: {
     backgroundColor:'#9B99FF' ,
     height: 12,
-    
     left: 0,
     top: 0,
   },
@@ -47,14 +46,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     Width: 291,
     Height: 291,
-    marginTop: 5,
+    marginTop: 75,
     marginHorizontal:40
   },
   buttonContainer:{
     marginBottom:25,
     width:'100%',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     height:'18%'
    
   },

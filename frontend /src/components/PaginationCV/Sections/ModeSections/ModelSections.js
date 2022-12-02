@@ -8,6 +8,8 @@ import style from "./style";
 import fonts from "../../../../utils/fonts";
 import colors from "../../../../utils/colors";
 
+
+
 const ModelSections = ({ navigation }) => {
   return (
     <FlatList
@@ -24,6 +26,7 @@ const ModelSections = ({ navigation }) => {
             <TouchableOpacity onPress={() => navigation.navigate(item.page)}>
               <Icon name="chevron-right" size={28} color={colors.neutro600} />
             </TouchableOpacity>
+          
           </View>
         );
       }}

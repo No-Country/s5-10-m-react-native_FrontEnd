@@ -21,7 +21,7 @@ const Login = (props) => {
     <View style={styles.container}>
       <View>
         <MyText 
-          value={'Crear cuenta con mail'} 
+          value={'Ingresar con mail'} 
           size={24} 
           color={colors.neutro700}
           style={[fonts.h1, colors.neutro700]}
@@ -33,7 +33,7 @@ const Login = (props) => {
       >
         {({ handleChange, handleBlur, handleSubmit, values }) => (
           <View style={styles.form}>
-            <View>
+          {/*   <View>
               <Text style={styles.formLabel}>Nombre y Apellido</Text>
               <TextInput
                 onChangeText={handleChange('name')}
@@ -42,8 +42,8 @@ const Login = (props) => {
                 placeholder={'Nombre y Apellido'}
                 style={styles.formInput}
               />
-            </View>
-            {/* <View>
+            </View> */}
+          <View>
             <Text style={styles.formLabel}>Correo electronico</Text>
               <TextInput
                 onChangeText={handleChange('email')}
@@ -52,7 +52,7 @@ const Login = (props) => {
                 placeholder={'Ej: juan@mail.com'}
                 style={styles.formInput}
               />
-            </View> */}
+            </View> 
             <View>
               <Text style={styles.formLabelContrasena}>Contraseña</Text>
               <TextInput

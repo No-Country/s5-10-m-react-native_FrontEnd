@@ -5,7 +5,7 @@ import Styles from './style';
 import colors from "../../utils/colors";
 import fonts from "../../utils/fonts";
 
-function Userprofile({ navigation }) {
+function Userprofile({ props }) {
     return (
             <View style={Styles.listConatiner}>
                 <TouchableOpacity style={Styles.section}>
@@ -49,7 +49,7 @@ function Userprofile({ navigation }) {
                      <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700}  onPress={() => navigation.navigate('')}/>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={Styles.section}>
+                {/* <TouchableOpacity style={Styles.section}>
                    <MaterialIcons name="nightlight-round" size={24} color={colors.neutro700} />
                     <Text
                         color={colors.neutro700}
@@ -60,10 +60,9 @@ function Userprofile({ navigation }) {
                           Modo Nocturno
                     </Text>
                    
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
-                <TouchableOpacity style={Styles.section}>
-                   <MaterialIcons name="logout" size={24} color={colors.google} /> 
+                <TouchableOpacity style={Styles.section2}>
                     <Text
                         color={colors.google}
                         size={fonts.title.fontSize}
@@ -72,8 +71,8 @@ function Userprofile({ navigation }) {
                     >     
                      Salir 
                      </Text>
-                     <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.google} onPress={() => navigation.navigate('')} />  
-                    
+            
+                     <MaterialIcons name="logout" size={24} color={colors.google} onPress={() => props.navigation.navigate('OnBoarding')}/> 
                 </TouchableOpacity>
             </View>
 

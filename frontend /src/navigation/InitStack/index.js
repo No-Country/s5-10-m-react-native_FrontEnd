@@ -4,6 +4,7 @@ import WelcomeView from "../../screens/WelcomeView";
 import Register from "../../screens/Register";
 import Login from "../../screens/Login";
 import  OnBoarding from '../../screens/OnBoarding';
+import Email from "../../screens/EmailConfirmation/Email";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,11 +15,12 @@ const InitStack = ({navigation}) => {
       initialRouteName="OnBoarding"
       screenOptions={{ headerShown: true}}
     >
-
+  
       <Stack.Screen name="OnBoarding" component={OnBoarding} options={{ title: "Perfil", headerShown: false }} />
       <Stack.Screen name="WelcomeView" component={WelcomeView} options={{ title: "Perfil", headerShown: false }} />
       <Stack.Screen name="Login" component={Login} options={{  headerShown: true }}  />
       <Stack.Screen name="Register" component={Register} options={{  headerShown: true}}  />
+      <Stack.Screen name="Email" component={Email} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };
