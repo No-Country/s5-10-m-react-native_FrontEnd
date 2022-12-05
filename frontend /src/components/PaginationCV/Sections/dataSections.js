@@ -4,7 +4,7 @@ export const dataSections = [
     page: "RolPage",
   },
   {
-    title: "Datos personales",
+    title: "Datos personales y Contacto",
     page: "PersonalPage",
   },
   {
@@ -20,7 +20,7 @@ export const dataSections = [
     page: "EducationPage",
   },
   {
-    title: "Aptitudes",
+    title: "Herramientas y habilidades",
     page: "SkillsPage",
   },
 ];
