@@ -68,7 +68,7 @@ const Register = (props) => {
                 bgcolor={colors.primary500}
                 color={colors.neutro100}
                 style={styles.btn}
-                height={'56%'}
+                height={'96%'}
               />
             </View>
           </View>

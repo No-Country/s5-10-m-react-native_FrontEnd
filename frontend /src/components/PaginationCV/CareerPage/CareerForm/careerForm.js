@@ -23,6 +23,11 @@ const CareerForm = (props) => {
     const [date, setDate] = useState(new Date())
     const styles = Styles;
 
+
+    const agregar = () =>{
+      setGuardar('Guardado');
+      props.navigation.navigate('EducationPage')
+    }
   return (
     <ScrollView>
     <View style={Styles.container}>
@@ -127,7 +132,7 @@ const CareerForm = (props) => {
             </View>
             <View style={{display: 'flex', justifyContent: 'center'}}>
             <MyButton
-                onPress={() => setGuardar('Guardado')} 
+                onPress={() => agregar()} 
                 icons = {false}
                 text={guardar} 
                 bgcolor={colors.primary500} 

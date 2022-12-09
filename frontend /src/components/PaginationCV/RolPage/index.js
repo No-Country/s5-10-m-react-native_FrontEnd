@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Text from "../../Generics/MyText";
-import Button from "../../Generics/MyButton";
+import MyButton from "../../Generics/MyButton";
 import { FlatList, TextInput, TouchableOpacity, View } from "react-native";
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 import style from "./style";
@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 const RolPage = (props) => {
   const [selectRole, setSelectRole] = useState("Rol/Puesto");
   const [otherRol, setOtherRol] = useState("......");
-  const { navigate } = useNavigation();
+
   return (
     <View style={style.container}>
       <View style={style.header}>
@@ -84,11 +84,11 @@ const RolPage = (props) => {
         }}
       />
       <View style={style.buttonContainer}>
-        <Button
+        <MyButton
           color={colors.neutro100}
           bgcolor={colors.primary400}
-          onPress={() => navigate("PersonalPage")}
-          text={"Siguiente"}
+          onPress={() => props.navigation.navigate("StackPage")}
+          text={'Siguiente'}
           width={"80%"}
           padding={12}
         />

@@ -73,6 +73,7 @@ const Login = (props) => {
                 bgcolor={colors.primary500} 
                 color={colors.neutro100}
                 style={styles.btn}
+                height={'76%'}
               />
             </View>
           </View>

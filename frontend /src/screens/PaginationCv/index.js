@@ -13,7 +13,7 @@ const PaginationCv = ({ navigation }) => {
     <View style={styles.container}>
       <ModelSections navigation={navigation} />
       <View style={styles.elegird}>
-        <MyButton
+     {/*    <MyButton
         icon={<MaterialCommunityIcons name="brush" size={24} color="blue" />}
           text="Elegir diseño"
           bgcolor={colors.neutro100}
@@ -21,7 +21,7 @@ const PaginationCv = ({ navigation }) => {
           width={"85%"}
           padding={12}
           onPress={() =>console.log("cambiar desing")}
-        />
+        /> */}
       </View>
     </View>
   );

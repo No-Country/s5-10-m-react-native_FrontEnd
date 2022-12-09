@@ -10,6 +10,10 @@ import PersonalPage from "../../components/PaginationCV/PersonalPage/index";
 import SkillsPage from "../../components/PaginationCV/SkillsPage/index";
 import Education from "../../components/PaginationCV/EducationPage/educationSections/EducationView1";
 import CareerForm from "../../components/PaginationCV/CareerPage/CareerForm/careerForm";
+import AddSkill from "../../components/PaginationCV/SkillsPage/Skill/AddSkill";
+import SkillTime from "../../components/PaginationCV/SkillsPage/Skill/SkillTime";
+import SkillsList from "../../components/PaginationCV/SkillsPage/Skill/SkillList";
+import StackTech from "../../components/PaginationCV/RolPage/StackTech";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +31,11 @@ const PaginationCvStack = () => {
       <Stack.Screen
         name="RolPage"
         component={RolPage}
+        options={{ title: "Rol/Puesto" }}
+      />
+         <Stack.Screen
+        name="StackPage"
+        component={StackTech}
         options={{ title: "Rol/Puesto" }}
       />
       <Stack.Screen
@@ -62,7 +71,22 @@ const PaginationCvStack = () => {
       <Stack.Screen
         name="SkillsPage"
         component={SkillsPage}
-        options={{ title: "Aptitudes" }}
+        options={{ title: "Herramientas y habilidades" }}
+      />
+         <Stack.Screen
+        name="AddSkill"
+        component={AddSkill}
+        options={{ title: "Herramientas y habilidades" }}
+      />
+        <Stack.Screen
+        name="SkillTime"
+        component={SkillTime}
+        options={{ title: "Herramientas y habilidades" }}
+      />
+        <Stack.Screen
+        name="SkillList"
+        component={SkillsList}
+        options={{ title: "Herramientas y habilidades" }}
       />
     </Stack.Navigator>
   );

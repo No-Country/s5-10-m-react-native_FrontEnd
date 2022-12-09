@@ -65,7 +65,7 @@ const DescriptionPage = (props) => {
         <MyButton
           color={colors.neutro100}
           bgcolor={colors.primary400}
-          onPress={() => props.navigation.navigate("PersonalPage")}
+          onPress={() => props.navigation.navigate("CareerPage")}
           text={"Guardar"}
           width={"100%"}
           padding={12}

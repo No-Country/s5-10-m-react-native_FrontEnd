@@ -5,10 +5,10 @@ import Styles from './style';
 import colors from "../../utils/colors";
 import fonts from "../../utils/fonts";
 
-function Userprofile({ props }) {
+function Userprofile(props ) {
     return (
             <View style={Styles.listConatiner}>
-                <TouchableOpacity style={Styles.section}>
+                <TouchableOpacity style={Styles.section} onPress={() => navigation.navigate('')}>
                   <FontAwesome5 name="user-alt" size={24} color={colors.neutro700} />  
                    <Text
                         color={colors.neutro700}
@@ -18,10 +18,10 @@ function Userprofile({ props }) {
                     >
                         Nombre y Apellido
                         </Text> 
-                        <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700} onPress={() => navigation.navigate('')}/>
+                        <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700} />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={Styles.section}>
+                <TouchableOpacity style={Styles.section} onPress={() => navigation.navigate('')}>
                    <MaterialIcons name="email" size={24} color={colors.neutro700} />
                      <Text
                         color={colors.neutro700}
@@ -32,10 +32,10 @@ function Userprofile({ props }) {
                        
                         Correo electronico
                       </Text> 
-                       <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700} onPress={() => navigation.navigate('')}/>
+                       <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700} />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={Styles.section}>
+                <TouchableOpacity style={Styles.section} onPress={() => navigation.navigate('')}>
                        <FontAwesome5 name="lock" size={24} color={colors.neutro700} />
                     <Text
                         color={colors.neutro700}
@@ -46,7 +46,7 @@ function Userprofile({ props }) {
                      
                         Contraseña
                      </Text>   
-                     <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700}  onPress={() => navigation.navigate('')}/>
+                     <MaterialIcons name="keyboard-arrow-right" size={24} color={colors.neutro700}  />
                 </TouchableOpacity>
 
                 {/* <TouchableOpacity style={Styles.section}>
@@ -62,7 +62,7 @@ function Userprofile({ props }) {
                    
                 </TouchableOpacity> */}
 
-                <TouchableOpacity style={Styles.section2}>
+                <TouchableOpacity style={Styles.section2} onPress={() => props.navigation.navigate("Login")}>
                     <Text
                         color={colors.google}
                         size={fonts.title.fontSize}
@@ -72,7 +72,7 @@ function Userprofile({ props }) {
                      Salir 
                      </Text>
             
-                     <MaterialIcons name="logout" size={24} color={colors.google} onPress={() => props.navigation.navigate('OnBoarding')}/> 
+                     <MaterialIcons name="logout" size={24} color={colors.google} /> 
                 </TouchableOpacity>
             </View>
 

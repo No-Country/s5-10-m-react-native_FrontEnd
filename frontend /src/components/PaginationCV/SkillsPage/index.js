@@ -28,7 +28,7 @@ const SkillsPage = (props) => {
         icon={<Feather name="plus-circle" size={24} color="white" />}
         color={colors.neutro100}
         bgcolor={colors.primary400}
-        onPress={() => props.navigation.navigate("CareerForm")}
+        onPress={() => props.navigation.navigate("AddSkill")}
         text={"Agregar herramienta o habilidad"}
         height={50}
         width={"80%"}
